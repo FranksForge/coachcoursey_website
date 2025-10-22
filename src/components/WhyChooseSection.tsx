@@ -5,7 +5,7 @@ const WhyChooseSection = () => {
     "Personalized training programs designed for YOUR body and goals",
     "Weekly progress tracking and program adjustments",
     "Direct access to me via WhatsApp for questions and support",
-    "Comprehensive nutrition guidance—not just meal plans",
+    "Comprehensive nutrition guidance–not just meal plans",
     "Form checks and video analysis to prevent injuries",
     "Lifetime access to training resources and education",
   ];
@@ -34,7 +34,7 @@ const WhyChooseSection = () => {
             <p className="text-xl font-semibold mb-4">
               "I don't work with everyone. I work with people who are serious about change."
             </p>
-            <p className="text-muted-foreground">— Coach Rutger</p>
+            <p className="text-muted-foreground">– Coach Rutger</p>
           </div>
         </div>
       </div>

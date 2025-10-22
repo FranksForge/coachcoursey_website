@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Michael R.",
     role: "Software Engineer",
-    quote: "Rutger helped me break through my plateau — best shape of my life. His programming is strategic and his accountability kept me consistent.",
+    quote: "Rutger helped me break through my plateau – best shape of my life. His programming is strategic and his accountability kept me consistent.",
     result: "Lost 15kg, gained strength"
   },
   {

@@ -29,7 +29,7 @@ const AboutSection = () => {
 
             <p className="text-lg text-foreground/80 leading-relaxed">
               My approach is built on discipline, consistency, and results. No gimmicks, 
-              no quick fixes—just strategic programming that gets you stronger, leaner, 
+              no quick fixes–just strategic programming that gets you stronger, leaner, 
               and more confident in your body.
             </p>
 

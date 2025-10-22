@@ -30,7 +30,7 @@ const ResultsSection = () => {
         <div className="text-center mb-16">
           <h2 className="mb-4">Real People. Real Results.</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            These aren't just numbers—they're life-changing transformations.
+            These aren't just numbers–they're life-changing transformations.
           </p>
         </div>
 

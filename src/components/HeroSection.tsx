@@ -31,13 +31,13 @@ const HeroSection = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-foreground/90 max-w-2xl mb-12 animate-fade-in font-medium">
-          Online coaching with Coach Rutger — build strength, confidence, and discipline.
+          Online coaching with Coach Rutger – build strength, confidence, and discipline.
         </p>
 
         <Button 
           onClick={scrollToApplication}
           size="lg"
-          className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 py-6 btn-glow animate-scale-in"
+          className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 py-6 btn-glow animate-scale-in mt-8"
         >
           Apply for Coaching
         </Button>
