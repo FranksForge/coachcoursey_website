@@ -40,11 +40,11 @@ const programs = [
 
 const ProgramsSection = () => {
   const scrollToApplication = () => {
-    document.getElementById('application')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="py-24 px-6">
+    <section id="programs" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="mb-4 text-foreground">

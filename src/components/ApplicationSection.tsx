@@ -51,7 +51,7 @@ const ApplicationSection = () => {
   };
 
   return (
-    <section id="application" className="py-24 px-6">
+    <section id="apply" className="py-24 px-6">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="mb-4 text-foreground">

@@ -3,11 +3,11 @@ import { ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   const scrollToApplication = () => {
-    document.getElementById('application')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden mt-20">
       {/* Video Background */}
       <video
         autoPlay
