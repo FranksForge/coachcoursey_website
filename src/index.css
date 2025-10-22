@@ -85,4 +85,62 @@ All colors MUST be HSL.
   .btn-glow {
     box-shadow: var(--shadow-glow);
   }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  }
+
+  .animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .stagger-1 {
+    transition-delay: 0.2s;
+  }
+
+  .stagger-2 {
+    transition-delay: 0.4s;
+  }
+
+  .stagger-3 {
+    transition-delay: 0.6s;
+  }
+
+  .stagger-4 {
+    transition-delay: 0.8s;
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(var(--card), var(--card)) padding-box,
+                linear-gradient(135deg, hsl(35 90% 55%), hsl(35 85% 60%)) border-box;
+    border: 2px solid transparent;
+  }
+
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus visible for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
 }

@@ -2,12 +2,16 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import PhilosophySection from "@/components/PhilosophySection";
-import ProgramsSection from "@/components/ProgramsSection";
+import ProcessSection from "@/components/ProcessSection";
+import PricingSection from "@/components/PricingSection";
 import ResultsSection from "@/components/ResultsSection";
+import TransformationGallery from "@/components/TransformationGallery";
 import WhyChooseSection from "@/components/WhyChooseSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import FAQSection from "@/components/FAQSection";
 import ApplicationSection from "@/components/ApplicationSection";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
+import FloatingCoachAvatar from "@/components/FloatingCoachAvatar";
 
 const Index = () => {
   return (
@@ -16,12 +20,16 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <PhilosophySection />
-      <ProgramsSection />
+      <ProcessSection />
+      <PricingSection />
       <ResultsSection />
+      <TransformationGallery />
       <WhyChooseSection />
-      <TestimonialsSection />
+      <FAQSection />
       <ApplicationSection />
       <Footer />
+      <BackToTop />
+      <FloatingCoachAvatar />
     </div>
   );
 };
