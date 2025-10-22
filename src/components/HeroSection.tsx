@@ -20,11 +20,11 @@ const HeroSection = () => {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/95" />
 
       {/* Content */}
-      <div className="relative h-full flex flex-col items-center justify-center px-6 text-center">
-        <h1 className="mb-6 text-foreground max-w-5xl animate-fade-in">
+      <div className="relative h-full flex flex-col items-center justify-center px-6 text-center -mt-32">
+        <h1 className="mb-18 text-foreground max-w-5xl animate-fade-in">
           Transform Your Body.
           <br />
           <span className="text-gradient">Elevate Your Standards.</span>
