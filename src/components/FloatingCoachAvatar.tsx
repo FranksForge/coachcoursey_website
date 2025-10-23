@@ -69,6 +69,8 @@ const FloatingCoachAvatar = () => {
           : 'translateY(30px) scale(0.8)',
         transformOrigin: 'bottom right',
       }}
+      onMouseEnter={() => setShowTooltip(true)}
+      onMouseLeave={() => setShowTooltip(false)}
     >
       {/* Tooltip */}
       {showTooltip && isVisible && (
@@ -107,8 +109,6 @@ const FloatingCoachAvatar = () => {
         href="https://ig.me/m/coachedbyrutger"
         target="_blank"
         rel="noopener noreferrer"
-        onMouseEnter={() => setShowTooltip(true)}
-        onMouseLeave={() => setShowTooltip(false)}
         onClick={() => setShowTooltip(false)}
         className="block relative group"
         aria-label="Chat with Coach Rutger on Instagram"
