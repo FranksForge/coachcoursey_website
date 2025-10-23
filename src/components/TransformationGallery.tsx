@@ -1,4 +1,7 @@
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import useEmblaCarousel from "embla-carousel-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useCallback } from "react";
 
 const transformations = [
   {
@@ -29,6 +32,15 @@ const transformations = [
 
 const TransformationGallery = () => {
   const [ref, isInView] = useIntersectionObserver({ threshold: 0.2, freezeOnceVisible: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: 'start' });
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   return (
     <section className="py-24 px-6" ref={ref}>
@@ -47,52 +59,129 @@ const TransformationGallery = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {transformations.map((transformation, index) => (
-            <div
-              key={index}
-              className={`group relative bg-card border border-border/50 rounded-xl overflow-hidden card-hover transition-all duration-1200 ${
-                isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-              }`}
-              style={{ 
-                transitionDelay: `${index * 200}ms`,
-                boxShadow: "var(--shadow-card)"
-              }}
-            >
-              {/* Placeholder for Before/After Image */}
-              <div className="aspect-[3/4] bg-gradient-to-br from-secondary via-secondary/80 to-background relative overflow-hidden">
-                {/* Decorative gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-90"></div>
-                
-                {/* Image placeholder with icon */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <svg className="w-20 h-20 text-accent/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <div className="text-accent/50 font-semibold text-sm uppercase tracking-wider">
-                      Transformation Photo
+        {/* Transformations - Carousel on Mobile, Grid on Desktop */}
+        <div>
+          {/* Mobile Carousel */}
+          <div className="lg:hidden relative">
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                {transformations.map((transformation, index) => (
+                  <div
+                    key={index}
+                    className="flex-[0_0_85%] sm:flex-[0_0_70%] min-w-0 pl-3 pr-3"
+                  >
+                    <div
+                      className={`group relative bg-card border border-border/50 rounded-xl overflow-hidden card-hover transition-all duration-1200 ${
+                        isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                      }`}
+                      style={{ 
+                        transitionDelay: `${index * 200}ms`,
+                        boxShadow: "var(--shadow-card)"
+                      }}
+                    >
+                      {/* Placeholder for Before/After Image */}
+                      <div className="aspect-[3/4] bg-gradient-to-br from-secondary via-secondary/80 to-background relative overflow-hidden">
+                        {/* Decorative gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-90"></div>
+                        
+                        {/* Image placeholder with icon */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="text-center p-6">
+                            <svg className="w-20 h-20 text-accent/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <div className="text-accent/50 font-semibold text-sm uppercase tracking-wider">
+                              Transformation Photo
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Timeframe badge */}
+                        <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                          {transformation.timeframe}
+                        </div>
+                      </div>
+
+                      {/* Content overlay */}
+                      <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-card via-card to-transparent">
+                        <h3 className="text-xl font-bold text-foreground mb-2">{transformation.name}</h3>
+                        <div className="text-accent font-semibold mb-2">{transformation.stats}</div>
+                        <p className="text-foreground/70 text-sm">{transformation.description}</p>
+                      </div>
+
+                      {/* Hover overlay */}
+                      <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Carousel Navigation Arrows - Subtle Side Icons */}
+            <button
+              onClick={scrollPrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-muted-foreground hover:text-foreground p-2 rounded-full transition-all z-10"
+              aria-label="Previous transformation"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={scrollNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background text-muted-foreground hover:text-foreground p-2 rounded-full transition-all z-10"
+              aria-label="Next transformation"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Desktop Grid */}
+          <div className="hidden lg:grid lg:grid-cols-4 gap-6">
+            {transformations.map((transformation, index) => (
+              <div
+                key={index}
+                className={`group relative bg-card border border-border/50 rounded-xl overflow-hidden card-hover transition-all duration-1200 ${
+                  isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                }`}
+                style={{ 
+                  transitionDelay: `${index * 200}ms`,
+                  boxShadow: "var(--shadow-card)"
+                }}
+              >
+                {/* Placeholder for Before/After Image */}
+                <div className="aspect-[3/4] bg-gradient-to-br from-secondary via-secondary/80 to-background relative overflow-hidden">
+                  {/* Decorative gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-90"></div>
+                  
+                  {/* Image placeholder with icon */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <svg className="w-20 h-20 text-accent/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      <div className="text-accent/50 font-semibold text-sm uppercase tracking-wider">
+                        Transformation Photo
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Timeframe badge */}
+                  <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                    {transformation.timeframe}
                   </div>
                 </div>
 
-                {/* Timeframe badge */}
-                <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                  {transformation.timeframe}
+                {/* Content overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-card via-card to-transparent">
+                  <h3 className="text-xl font-bold text-foreground mb-2">{transformation.name}</h3>
+                  <div className="text-accent font-semibold mb-2">{transformation.stats}</div>
+                  <p className="text-foreground/70 text-sm">{transformation.description}</p>
                 </div>
-              </div>
 
-              {/* Content overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-card via-card to-transparent">
-                <h3 className="text-xl font-bold text-foreground mb-2">{transformation.name}</h3>
-                <div className="text-accent font-semibold mb-2">{transformation.stats}</div>
-                <p className="text-foreground/70 text-sm">{transformation.description}</p>
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Note about images */}

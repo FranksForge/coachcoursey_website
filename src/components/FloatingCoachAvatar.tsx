@@ -31,10 +31,10 @@ const FloatingCoachAvatar = () => {
   }, [hasShownAutoTooltip]);
 
   return (
-    <div className="fixed bottom-0 right-0 z-50">
+    <div className="fixed bottom-2 right-2 sm:bottom-0 sm:right-0 z-[9999]">
       {/* Tooltip */}
       {showTooltip && (
-        <div className="absolute bottom-full right-8 mb-4 animate-fade-in-up">
+        <div className="absolute bottom-full right-2 sm:right-8 mb-2 sm:mb-4 animate-fade-in-up">
           <div className="relative bg-card border border-accent/50 rounded-lg shadow-2xl p-4 min-w-[220px]">
             <button
               onClick={() => setShowTooltip(false)}
@@ -76,7 +76,7 @@ const FloatingCoachAvatar = () => {
         aria-label="Chat with Coach Rutger on Instagram"
       >
         {/* Avatar image - no border, no circle, flush to corner */}
-        <div className="relative w-64 h-64 overflow-hidden transition-transform hover:scale-105">
+        <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 overflow-hidden transition-transform hover:scale-105 shadow-lg">
           <img
             src={coachImage}
             alt="Coach Rutger"
