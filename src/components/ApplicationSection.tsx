@@ -1,7 +1,44 @@
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import { useState, useEffect } from "react";
 
 const ApplicationSection = () => {
   const [ref, isInView] = useIntersectionObserver({ threshold: 0.2, freezeOnceVisible: true });
+  const [isFormLoaded, setIsFormLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    // Load Tally widget script
+    const script = document.createElement('script');
+    script.src = 'https://tally.so/widgets/embed.js';
+    script.async = true;
+    script.onload = () => {
+      setIsFormLoaded(true);
+      // Initialize Tally after script loads
+      if (window.Tally) {
+        window.Tally.loadEmbeds();
+      }
+    };
+    script.onerror = () => {
+      setHasError(true);
+      console.error('Failed to load Tally form');
+    };
+    
+    document.body.appendChild(script);
+
+    // Set a timeout to show error if form doesn't load
+    const timeout = setTimeout(() => {
+      if (!isFormLoaded) {
+        setHasError(true);
+      }
+    }, 10000); // 10 second timeout
+
+    return () => {
+      clearTimeout(timeout);
+      if (script.parentNode) {
+        document.body.removeChild(script);
+      }
+    };
+  }, [isFormLoaded]);
 
   return (
     <section 
@@ -31,17 +68,54 @@ const ApplicationSection = () => {
           }`}
           style={{ transitionDelay: '300ms' }}
         >
-          <iframe 
-            data-tally-src="https://tally.so/embed/mZppo0?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-            loading="lazy" 
-            width="100%" 
-            height="694" 
-            frameBorder="0" 
-            marginHeight={0}
-            marginWidth={0}
-            title="Get Coached By Rutger"
-            className="rounded-lg"
-          ></iframe>
+          {/* Loading Spinner */}
+          {!isFormLoaded && !hasError && (
+            <div className="flex flex-col items-center justify-center py-20">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mb-4"></div>
+              <p className="text-foreground/70">Loading application form...</p>
+            </div>
+          )}
+
+          {/* Error Fallback */}
+          {hasError && (
+            <div className="text-center py-12">
+              <div className="mb-6">
+                <svg className="w-16 h-16 text-accent/50 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <h3 className="text-xl font-bold text-foreground mb-4">Form temporarily unavailable</h3>
+                <p className="text-foreground/70 mb-6 max-w-md mx-auto">
+                  Please apply directly via the link below, or try refreshing the page.
+                </p>
+              </div>
+              <a
+                href="https://tally.so/r/mZppo0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-8 py-4 rounded-lg btn-glow hover:scale-105 transition-transform"
+              >
+                Open Application Form
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          )}
+
+          {/* Tally Form */}
+          {!hasError && (
+            <iframe 
+              data-tally-src="https://tally.so/embed/mZppo0?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+              loading="lazy" 
+              width="100%" 
+              height="694" 
+              frameBorder="0" 
+              marginHeight={0}
+              marginWidth={0}
+              title="Get Coached By Rutger"
+              className={`rounded-lg transition-opacity duration-500 ${isFormLoaded ? 'opacity-100' : 'opacity-0'}`}
+            ></iframe>
+          )}
         </div>
 
         {/* Trust Indicators */}
