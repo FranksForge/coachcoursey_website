@@ -43,7 +43,7 @@ const TransformationGallery = () => {
   }, [emblaApi]);
 
   return (
-    <section className="py-24 px-6" ref={ref}>
+    <section className="w-full py-24 px-6" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div 
           className={`text-center mb-16 transition-all duration-1200 ${

@@ -99,7 +99,7 @@ const PricingSection = () => {
   };
 
   return (
-    <section id="pricing" className="py-24 px-6 bg-secondary/30" ref={sectionRef}>
+    <section id="pricing" className="w-full py-24 px-6 bg-secondary/30" ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
 

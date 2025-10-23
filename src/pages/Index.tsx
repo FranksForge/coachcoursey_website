@@ -10,12 +10,12 @@ import WhyChooseSection from "@/components/WhyChooseSection";
 import FAQSection from "@/components/FAQSection";
 import ApplicationSection from "@/components/ApplicationSection";
 import Footer from "@/components/Footer";
-import BackToTop from "@/components/BackToTop";
 import FloatingCoachAvatar from "@/components/FloatingCoachAvatar";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Navigation />
       <HeroSection />
       <AboutSection />
@@ -28,8 +28,8 @@ const Index = () => {
       <FAQSection />
       <ApplicationSection />
       <Footer />
-      <BackToTop />
       <FloatingCoachAvatar />
+      <ScrollToTop />
     </div>
   );
 };

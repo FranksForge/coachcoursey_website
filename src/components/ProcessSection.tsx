@@ -33,7 +33,7 @@ const ProcessSection = () => {
   const [ref, isInView] = useIntersectionObserver({ threshold: 0.2, freezeOnceVisible: true });
 
   return (
-    <section className="py-24 px-6 bg-secondary/30" ref={ref}>
+    <section className="w-full py-24 px-6 bg-secondary/30" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <div 
           className={`text-center mb-16 transition-all duration-800 ${

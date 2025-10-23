@@ -53,7 +53,7 @@ const FAQSection = () => {
   const [ref, isInView] = useIntersectionObserver({ threshold: 0.1, freezeOnceVisible: true });
 
   return (
-    <section id="faq" className="py-24 px-6" ref={ref}>
+    <section id="faq" className="w-full py-24 px-6" ref={ref}>
       <div className="max-w-4xl mx-auto">
         <div 
           className={`text-center mb-16 transition-all duration-1200 ${

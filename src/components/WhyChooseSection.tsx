@@ -14,8 +14,8 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-secondary/30" ref={ref}>
-      <div className="container mx-auto">
+    <section className="w-full py-24 px-6 bg-secondary/30" ref={ref}>
+      <div className="max-w-7xl mx-auto">
         <div className="max-w-4xl mx-auto">
           <div 
             className={`text-center mb-12 transition-all duration-1200 ${

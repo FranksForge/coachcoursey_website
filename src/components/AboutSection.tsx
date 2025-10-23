@@ -7,7 +7,7 @@ const AboutSection = () => {
   const [ref, isInView] = useIntersectionObserver({ threshold: 0.2, freezeOnceVisible: true });
 
   return (
-    <section id="about" className="py-24 px-6 bg-secondary/30" ref={ref}>
+    <section id="about" className="w-full py-24 px-6 bg-secondary/30" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}

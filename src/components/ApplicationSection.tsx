@@ -6,7 +6,7 @@ const ApplicationSection = () => {
   return (
     <section 
       id="apply" 
-      className="py-24 px-6 bg-gradient-to-b from-background to-secondary/30"
+      className="w-full py-24 px-6 bg-gradient-to-b from-background to-secondary/30"
       ref={ref}
     >
       <div className="max-w-4xl mx-auto">

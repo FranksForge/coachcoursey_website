@@ -23,8 +23,8 @@ const PhilosophySection = () => {
   ];
 
   return (
-    <section id="philosophy" className="py-24 px-6 bg-secondary/30" ref={ref}>
-      <div className="container mx-auto">
+    <section id="philosophy" className="w-full py-24 px-6 bg-secondary/30" ref={ref}>
+      <div className="max-w-7xl mx-auto">
         <div 
           className={`text-center mb-16 transition-all duration-1200 ${
             isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
