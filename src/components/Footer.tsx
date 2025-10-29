@@ -1,5 +1,5 @@
-import { Instagram, Mail } from "lucide-react";
-import logo from "@/assets/cbr-logo.png";
+import { Instagram } from "lucide-react";
+import { brandName, logoSrc } from "@/brand/config";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,22 +12,22 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
               <img 
-                src={logo} 
-                alt="Coached By Rutger" 
+                src={logoSrc} 
+                alt="Brand logo" 
                 className="h-16" 
                 width="auto"
                 height="64"
               />
               <span className="text-foreground font-bold text-2xl">
-                Coached By Rutger
+                {brandName}
               </span>
             </div>
             <p className="text-foreground/70 leading-relaxed mb-4">
-              Transform Your Body.<br />
-              Elevate Your Standards.
+              From Burnout to Purpose.<br />
+              Lead With Discipline.
             </p>
             <p className="text-foreground/60 text-sm">
-              Empowering professionals and athletes to achieve their physical potential through proven coaching systems.
+              Faith-driven coaching for men to burn fat, build muscle, and lead.
             </p>
           </div>
 
@@ -73,20 +73,13 @@ const Footer = () => {
             <h4 className="text-lg font-bold text-foreground mb-4">Connect</h4>
             <div className="space-y-4">
               <a
-                href="https://www.instagram.com/coachedbyrutger/"
+                href="https://www.instagram.com/coachcoursey_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center md:justify-end gap-3 text-foreground/70 hover:text-accent transition-colors group"
               >
                 <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>@coachedbyrutger</span>
-              </a>
-              <a
-                href="mailto:contact@coachrutger.com"
-                className="flex items-center justify-center md:justify-end gap-3 text-foreground/70 hover:text-accent transition-colors group"
-              >
-                <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>contact@coachrutger.com</span>
+                <span>@coachcoursey_</span>
               </a>
             </div>
 
@@ -103,9 +96,9 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-foreground/60 text-sm">
-            <p>&copy; {currentYear} Coach Rutger. All rights reserved.</p>
+            <p>&copy; {currentYear} {brandName}. All rights reserved.</p>
             <div className="flex items-center gap-2">
-              <span>🇳🇱 Based in the Netherlands</span>
+              <span>Built by <a href="https://www.instagram.com/franks.forge/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors">@franks.forge</a></span>
             </div>
           </div>
         </div>

@@ -5,13 +5,13 @@ import PhilosophySection from "@/components/PhilosophySection";
 import ProcessSection from "@/components/ProcessSection";
 import PricingSection from "@/components/PricingSection";
 import ResultsSection from "@/components/ResultsSection";
-import TransformationGallery from "@/components/TransformationGallery";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import FAQSection from "@/components/FAQSection";
 import ApplicationSection from "@/components/ApplicationSection";
 import Footer from "@/components/Footer";
 import FloatingCoachAvatar from "@/components/FloatingCoachAvatar";
 import ScrollToTop from "@/components/ScrollToTop";
+import ProgramSection from "@/components/ProgramSection";
 
 const Index = () => {
   return (
@@ -21,9 +21,9 @@ const Index = () => {
       <AboutSection />
       <PhilosophySection />
       <ProcessSection />
+      <ProgramSection />
       <PricingSection />
       <ResultsSection />
-      <TransformationGallery />
       <WhyChooseSection />
       <FAQSection />
       <ApplicationSection />

@@ -26,21 +26,12 @@ const HeroSection = () => {
       className="relative min-h-screen w-full max-w-full overflow-hidden pt-20"
       aria-label="Hero section"
     >
-      {/* Video Background with Parallax */}
+      {/* Background with Parallax */}
       <div 
         className="absolute inset-0 w-full h-full"
         style={{ transform: `translateY(${parallaxOffset}px)` }}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover parallax"
-          aria-hidden="true"
-        >
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
-        </video>
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-background via-secondary/40 to-background" aria-hidden="true" />
       </div>
 
       {/* Enhanced Overlay with Gradient */}
@@ -59,23 +50,22 @@ const HeroSection = () => {
         <div className="flex-shrink-0">
           <div className="max-w-2xl md:max-w-5xl mx-auto">
             <h1 className="text-foreground animate-fade-in-up text-4xl md:text-5xl lg:text-7xl">
-              Transform Your Body.
+              From Burnout to Purpose.
               <br />
-              <span className="text-gradient">Elevate Your Standards.</span>
+              <span className="text-gradient">Lead Yourself With Discipline.</span>
             </h1>
           </div>
         </div>
 
-        {/* MIDDLE: Empty space for video captions - reduced on mobile */}
-        <div className="h-12 md:h-32 lg:h-40"></div>
+        {/* MIDDLE: removed extra spacer to tighten layout */}
 
         {/* LOWER: Subtitle, CTAs & Stats */}
         <div className="flex-shrink-0 space-y-6 md:space-y-12">
           {/* Subtitle below captions */}
           <div className="max-w-2xl md:max-w-5xl mx-auto px-2">
-            <p className="text-base md:text-xl lg:text-2xl text-foreground/90 max-w-3xl mx-auto animate-fade-in-up font-medium leading-relaxed" style={{ animationDelay: '0.2s' }}>
-              Join elite professionals and athletes who refuse to settle for average. 
-              Build <span className="text-accent font-semibold">strength</span>, <span className="text-accent font-semibold">confidence</span>, and <span className="text-accent font-semibold">discipline</span> with proven coaching systems.
+            <p className="mt-4 md:mt-6 text-base md:text-xl lg:text-2xl text-foreground/90 max-w-3xl mx-auto animate-fade-in-up font-medium leading-relaxed" style={{ animationDelay: '0.2s' }}>
+              Faith-driven coaching for out-of-shape men to burn fat, build muscle, 
+              and step up as disciplined leaders–in the gym and in life.
             </p>
           </div>
 
@@ -88,7 +78,7 @@ const HeroSection = () => {
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-base md:text-lg px-6 py-4 md:px-10 md:py-7 btn-glow hover:scale-105 transition-transform shadow-2xl"
               >
-                Apply for Coaching
+                Start Your Transformation
               </Button>
               <Button 
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
@@ -96,7 +86,7 @@ const HeroSection = () => {
                 variant="outline"
                 className="hidden sm:flex border-2 border-accent/50 text-foreground hover:bg-accent/10 hover:border-accent font-semibold text-base md:text-lg px-6 py-4 md:px-10 md:py-7 backdrop-blur-sm"
               >
-                Learn More
+                Meet Your Coach
               </Button>
             </div>
 
@@ -104,18 +94,18 @@ const HeroSection = () => {
 
           {/* Social Proof */}
           <div className="max-w-2xl md:max-w-5xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-8 text-foreground/70 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="flex flex-wrap justify-center gap-8 text-foreground/80 animate-fade-in" style={{ animationDelay: '0.6s' }}>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent">500+</div>
-                <div className="text-sm">Transformations</div>
+                <div className="text-sm uppercase tracking-wider text-foreground/60">Credibility</div>
+                <div className="mt-1 text-base font-semibold">1st Place Classic 35+</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent">12+</div>
-                <div className="text-sm">Years Experience</div>
+                <div className="text-sm uppercase tracking-wider text-foreground/60">Approach</div>
+                <div className="mt-1 text-base font-semibold">Faith-Driven. No Excuses.</div>
               </div>
               <div className="text-center hidden sm:block">
-                <div className="text-3xl font-bold text-accent">95%</div>
-                <div className="text-sm">Success Rate</div>
+                <div className="text-sm uppercase tracking-wider text-foreground/60">Mission</div>
+                <div className="mt-1 text-base font-semibold">Burn Fat. Build Muscle. Lead.</div>
               </div>
             </div>
           </div>

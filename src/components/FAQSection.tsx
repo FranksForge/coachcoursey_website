@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     question: "How long until I see results?",
-    answer: "Most clients see noticeable changes in 4-6 weeks, with significant transformations occurring at the 12-week mark. However, sustainable results require commitment—I recommend a minimum 3-month commitment to see the full benefits of the program and build lasting habits."
+    answer: "Most clients see noticeable changes in 4-6 weeks, with significant transformations occurring at the 12-week mark. However, sustainable results require commitment–I recommend a minimum 3-month commitment to see the full benefits of the program and build lasting habits."
   },
   {
     question: "What if I can't commit to the full program?",
@@ -29,11 +29,11 @@ const faqs = [
   },
   {
     question: "What makes your coaching different?",
-    answer: "I don't use cookie-cutter programs. Every plan is customized to your body, goals, schedule, and lifestyle. I focus on sustainable habits, not quick fixes. Plus, you get direct access to me—not a team of assistants. I personally work with every client."
+    answer: "I don't use cookie-cutter programs. Every plan is customized to your body, goals, schedule, and lifestyle. I focus on sustainable habits, not quick fixes. Plus, you get direct access to me–not a team of assistants. I personally work with every client."
   },
   {
     question: "Can you help with nutrition if I have dietary restrictions?",
-    answer: "Absolutely. I work with various dietary preferences and restrictions—vegan, vegetarian, gluten-free, etc. My nutrition approach is flexible and focused on principles, not rigid meal plans. We'll find an approach that works for your lifestyle and preferences."
+    answer: "Absolutely. I work with various dietary preferences and restrictions–vegan, vegetarian, gluten-free, etc. My nutrition approach is flexible and focused on principles, not rigid meal plans. We'll find an approach that works for your lifestyle and preferences."
   },
   {
     question: "What if I'm a complete beginner?",
@@ -65,7 +65,7 @@ const FAQSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Everything you need to know about working with Coach Rutger
+            What to expect from faith-driven, discipline-first coaching
           </p>
         </div>
 
@@ -102,12 +102,11 @@ const FAQSection = () => {
         >
           <p className="text-foreground/70 mb-4">Still have questions?</p>
           <a
-            href="https://www.instagram.com/coachedbyrutger/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#apply"
+            onClick={(e) => { e.preventDefault(); document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth' }); }}
             className="inline-block text-accent hover:text-accent/80 font-semibold underline underline-offset-4"
           >
-            DM me on Instagram
+            Contact us
           </a>
         </div>
       </div>

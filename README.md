@@ -1,14 +1,13 @@
-# Coach Rutger - Elite Online Fitness & Nutrition Coaching
+# Whitelabel Fitness Coaching Site Template
 
-A modern, high-performance website for Coach Rutger's online fitness and nutrition coaching business.
+A modern, high-performance website template for online fitness and nutrition coaching businesses.
 
 ## About
 
-This website showcases Coach Rutger's professional coaching services, featuring:
-- 12+ years of coaching experience
-- 500+ successful client transformations
-- Personalized training and nutrition programs
-- Proven results for professionals and athletes
+This template showcases professional coaching services with:
+- Programs and pricing sections
+- Results and transformation gallery
+- FAQs and application form integration
 
 ## Technologies
 
@@ -61,7 +60,7 @@ npm run preview
 
 ```
 rutgers-elevate/
-├── public/           # Static assets
+├── public/           # Static assets (e.g., favicon.png, placeholder.svg, home_og.png)
 ├── src/
 │   ├── assets/      # Images and media
 │   ├── components/  # React components
@@ -83,12 +82,7 @@ rutgers-elevate/
 - **Accessibility** - WCAG compliant with ARIA labels
 - **Form Integration** - Tally form for coaching applications
 
-## Contact
+## Notes
 
-For questions about coaching services:
-- Instagram: [@coachedbyrutger](https://www.instagram.com/coachedbyrutger/)
-- Instagram DM: [https://ig.me/m/coachedbyrutger](https://ig.me/m/coachedbyrutger)
-
----
-
-Built with care for Coach Rutger's clients.
+- All personal names, handles, and media have been removed.
+- Replace placeholder images/text with your own brand assets.

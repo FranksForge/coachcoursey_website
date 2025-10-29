@@ -89,7 +89,7 @@ const ApplicationSection = () => {
                 </p>
               </div>
               <a
-                href="https://tally.so/r/mZppo0"
+                href="https://tally.so/r/n9LrWQ"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-8 py-4 rounded-lg btn-glow hover:scale-105 transition-transform"
@@ -105,14 +105,14 @@ const ApplicationSection = () => {
           {/* Tally Form */}
           {!hasError && (
             <iframe 
-              data-tally-src="https://tally.so/embed/mZppo0?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+              data-tally-src="https://tally.so/embed/n9LrWQ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
               loading="lazy" 
               width="100%" 
               height="694" 
               frameBorder="0" 
               marginHeight={0}
               marginWidth={0}
-              title="Get Coached By Rutger"
+              title="Coaching Application"
               className={`rounded-lg transition-opacity duration-500 ${isFormLoaded ? 'opacity-100' : 'opacity-0'}`}
             ></iframe>
           )}

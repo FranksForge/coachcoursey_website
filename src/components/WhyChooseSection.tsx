@@ -5,12 +5,12 @@ const WhyChooseSection = () => {
   const [ref, isInView] = useIntersectionObserver({ threshold: 0.2, freezeOnceVisible: true });
 
   const reasons = [
-    "Personalized training programs designed for YOUR body and goals",
-    "Weekly progress tracking and program adjustments",
-    "Direct access to me via WhatsApp for questions and support",
-    "Comprehensive nutrition guidance—not just meal plans",
-    "Form checks and video analysis to prevent injuries",
-    "Lifetime access to training resources and education",
+    "Faith-driven standards: discipline first, results follow",
+    "Simple nutrition you can sustain–no gimmicks or extremes",
+    "Progressive training that builds strength and muscle",
+    "Direct accountability–clear check-ins, clear expectations",
+    "Movement quality and injury prevention come first",
+    "Lead at home, work, and the gym–purpose over comfort",
   ];
 
   return (
@@ -22,11 +22,11 @@ const WhyChooseSection = () => {
               isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
           >
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Why Choose Me</span>
-            <h2 className="mb-4 mt-4">Why Coach Rutger?</h2>
-            <p className="text-xl text-muted-foreground">
-              I don't just give you a workout plan and disappear. I'm invested in your success.
-            </p>
+            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Why Choose Coursey</span>
+            <h2 className="mb-4 mt-4">Built on Discipline and Purpose</h2>
+              <p className="text-xl text-muted-foreground">
+                This is more than workouts. It’s a faith-driven standard for how you live.
+              </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -57,7 +57,7 @@ const WhyChooseSection = () => {
               <p className="text-xl md:text-2xl font-semibold mb-4 text-foreground leading-relaxed">
                 "I don't work with everyone. I work with people who are serious about change."
               </p>
-              <p className="text-muted-foreground font-medium">– Coach Rutger</p>
+              <p className="text-muted-foreground font-medium">– Coach Coursey</p>
             </div>
           </div>
         </div>

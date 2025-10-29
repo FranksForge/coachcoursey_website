@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
-import logo from "@/assets/cbr-logo.png";
+import { brandName, logoSrc } from "@/brand/config";
 
 const navItems = [
   { id: "about", label: "About" },
@@ -98,17 +98,17 @@ const Navigation = () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className="flex-shrink-0 flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
-              aria-label="Coach Rutger - Home"
+              aria-label="Home"
             >
               <img 
-                src={logo} 
-                alt="Coached By Rutger" 
+                src={logoSrc} 
+                alt="Brand logo" 
                 className="h-12 md:h-14" 
                 width="auto"
                 height="56"
               />
               <span className="text-foreground font-bold text-lg md:text-xl hidden sm:inline">
-                Coached By Rutger
+                {brandName}
               </span>
             </a>
 

@@ -7,18 +7,18 @@ const PhilosophySection = () => {
   const principles = [
     {
       icon: Target,
-      title: "Precision Training",
-      description: "Every rep counts. Science-backed programming tailored to your goals, not cookie-cutter routines.",
+      title: "Discipline First",
+      description: "Standards over motivation. Simple, repeatable habits you can sustain—no gimmicks, no shortcuts.",
     },
     {
       icon: TrendingUp,
-      title: "Progressive Overload",
-      description: "Consistent, measurable progress. We track everything to ensure you're always moving forward.",
+      title: "Strong Body, Strong Mind",
+      description: "Progressive strength training paired with mindset work so you lead at home, work, and the gym.",
     },
     {
       icon: Award,
-      title: "Accountability",
-      description: "Weekly check-ins, ongoing support, and real feedback. You're never alone in this journey.",
+      title: "Faith‑Driven Accountability",
+      description: "Clear expectations, weekly check‑ins, and honest feedback. Purpose over comfort, always.",
     },
   ];
 
@@ -33,7 +33,7 @@ const PhilosophySection = () => {
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Philosophy</span>
           <h2 className="mb-4 mt-4">My Coaching Philosophy</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            No shortcuts. No gimmicks. Just proven methods that deliver real, sustainable results.
+            Faith‑driven, discipline‑first coaching. Simple habits, clear standards, and strength work that changes bodies—and mindsets.
           </p>
         </div>
 

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { MessageCircle, X } from "lucide-react";
-import coachImage from "@/assets/yourcoach.png";
 
 const FloatingCoachAvatar = () => {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -87,16 +86,17 @@ const FloatingCoachAvatar = () => {
               Got questions?
             </p>
             <p className="text-xs text-foreground/70 mb-3">
-              Message me directly on Instagram
+              Have questions? DM me on Instagram.
             </p>
             <a
-              href="https://ig.me/m/coachedbyrutger"
+              href="https://ig.me/m/coachcoursey_/"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => setShowTooltip(false)}
               className="flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground text-sm font-semibold px-4 py-2 rounded-lg transition-all hover:scale-105"
             >
               <MessageCircle className="w-4 h-4" />
-              Chat Now
+              DM on Instagram
             </a>
             {/* Arrow */}
             <div className="absolute -bottom-2 right-12 w-4 h-4 bg-card border-r border-b border-accent/50 transform rotate-45"></div>
@@ -106,18 +106,18 @@ const FloatingCoachAvatar = () => {
 
       {/* Avatar Button */}
       <a
-        href="https://ig.me/m/coachedbyrutger"
+        href="https://www.instagram.com/coachcoursey_/"
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => setShowTooltip(false)}
         className="block relative group"
-        aria-label="Chat with Coach Rutger on Instagram"
+        aria-label="Chat with Coach Coursey on Instagram"
       >
         {/* Avatar image - no border, no circle, flush to corner */}
         <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 overflow-hidden transition-transform hover:scale-105">
           <img
-            src={coachImage}
-            alt="Coach Rutger"
+            src="/coach-coursey.png"
+            alt="Coach Coursey"
             className="w-full h-full object-cover"
           />
         </div>

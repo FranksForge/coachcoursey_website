@@ -8,43 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 195 40% 25%;
-    --foreground: 45 60% 90%;
+    --background: 220 15% 10%; /* graphite base */
+    --foreground: 210 20% 96%;
 
-    --card: 195 35% 22%;
-    --card-foreground: 45 60% 90%;
+    --card: 220 14% 12%;
+    --card-foreground: 210 20% 96%;
 
-    --popover: 195 35% 22%;
-    --popover-foreground: 45 60% 90%;
+    --popover: 220 14% 12%;
+    --popover-foreground: 210 20% 96%;
 
-    --primary: 35 90% 55%;
-    --primary-foreground: 195 40% 25%;
+    --primary: 24 92% 50%; /* coach color #e65f03 */
+    --primary-foreground: 220 15% 12%;
 
-    --secondary: 195 35% 30%;
-    --secondary-foreground: 45 60% 90%;
+    --secondary: 220 10% 18%;
+    --secondary-foreground: 210 20% 96%;
 
-    --muted: 195 30% 35%;
-    --muted-foreground: 45 40% 70%;
+    --muted: 220 10% 28%;
+    --muted-foreground: 210 10% 75%;
 
-    --accent: 35 90% 55%;
-    --accent-foreground: 195 40% 25%;
+    --accent: 24 92% 50%; /* coach color #e65f03 */
+    --accent-foreground: 220 15% 12%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 45 60% 90%;
+    --destructive-foreground: 210 20% 96%;
 
-    --border: 195 30% 35%;
-    --input: 195 35% 30%;
-    --ring: 35 90% 55%;
+    --border: 220 10% 22%;
+    --input: 220 10% 18%;
+    --ring: 24 92% 50%;
 
     --radius: 0.5rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(195 40% 25%) 0%, hsl(195 45% 20%) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(35 90% 55%) 0%, hsl(35 85% 60%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(195 35% 22%) 0%, hsl(195 30% 28%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 15% 10%) 0%, hsl(220 15% 8%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(24 92% 50%) 0%, hsl(24 90% 56%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(220 14% 12%) 0%, hsl(220 12% 16%) 100%);
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(35 90% 55% / 0.3);
+    --shadow-glow: 0 0 40px hsl(24 92% 50% / 0.3);
     --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
     --shadow-glass: 0 8px 32px 0 hsl(0 0% 0% / 0.2);
   }
