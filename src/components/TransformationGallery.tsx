@@ -25,10 +25,7 @@ const TransformationGallery = () => {
           <div className="grid md:grid-cols-2 gap-0 md:gap-0">
             <div className="group mx-auto w-full sm:max-w-[400px] rounded-xl overflow-hidden border-2 border-accent/50 hover:border-accent bg-card shadow-[var(--shadow-glow)] hover:ring-2 hover:ring-accent/40 transition-all duration-500 animate-scale-in hover:scale-[1.03]">
               <div className="relative aspect-[4/5]">
-                <picture>
-                  <source srcSet="/before.webp" type="image/webp" />
-                  <img src="/before.png" alt="Coach Coursey transformation – before" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" fetchPriority="low" sizes="(max-width: 640px) 100vw, 400px" />
-                </picture>
+                <img src="/before.png" alt="Coach Coursey transformation – before" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" sizes="(max-width: 640px) 100vw, 400px" />
                 {/* Dark themed overlay to blend with site colors */}
                 <div className="pointer-events-none absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors" aria-hidden="true" />
                 {/* Bottom gradient for caption readability */}
@@ -41,10 +38,7 @@ const TransformationGallery = () => {
             </div>
             <div className="group mx-auto w-full sm:max-w-[400px] rounded-xl overflow-hidden border-2 border-accent/50 hover:border-accent bg-card shadow-[var(--shadow-glow)] hover:ring-2 hover:ring-accent/40 transition-all duration-500 animate-scale-in hover:scale-[1.03]">
               <div className="relative aspect-[4/5]">
-                <picture>
-                  <source srcSet="/after.webp" type="image/webp" />
-                  <img src="/after.png" alt="Coach Coursey transformation – after" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" fetchPriority="low" sizes="(max-width: 640px) 100vw, 400px" />
-                </picture>
+                <img src="/after.png" alt="Coach Coursey transformation – after" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" sizes="(max-width: 640px) 100vw, 400px" />
                 {/* Dark themed overlay to blend with site colors */}
                 <div className="pointer-events-none absolute inset-0 bg-black/35 group-hover:bg-black/45 transition-colors" aria-hidden="true" />
                 {/* Bottom gradient for caption readability */}

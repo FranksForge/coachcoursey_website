@@ -11,18 +11,14 @@ const Footer = () => {
           {/* Brand */}
           <div className="text-center md:text-left">
             <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
-              <picture>
-                <source srcSet="/logo.webp" type="image/webp" />
-                <img 
-                  src={logoSrc} 
-                  alt="Brand logo" 
-                  className="h-16" 
-                  width="64"
-                  height="64"
-                  decoding="async"
-                  fetchPriority="low"
-                />
-              </picture>
+              <img 
+                src={logoSrc} 
+                alt="Brand logo" 
+                className="h-16" 
+                width={64}
+                height={64}
+                decoding="async"
+              />
               <span className="text-foreground font-bold text-2xl">
                 {brandName}
               </span>

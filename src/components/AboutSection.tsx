@@ -16,18 +16,14 @@ const AboutSection = () => {
             }`}
           >
             <div className="rounded-xl overflow-hidden border-2 border-border bg-transparent shadow-[var(--shadow-card)]">
-              <picture>
-                <source srcSet="/coach-coursey.webp" type="image/webp" />
-                <img
-                  src="/coach-coursey.png"
-                  alt="Coach Coursey"
-                  className="w-full h-auto object-cover"
-                  decoding="async"
-                  fetchPriority="low"
-                  loading="lazy"
-                  sizes="(max-width: 640px) 100vw, 600px"
-                />
-              </picture>
+              <img
+                src="/coach-coursey.png"
+                alt="Coach Coursey"
+                className="w-full h-auto object-cover"
+                decoding="async"
+                loading="lazy"
+                sizes="(max-width: 640px) 100vw, 600px"
+              />
               <div className="px-4 py-3 bg-card border-t border-border/50 text-center">
                 <span className="text-sm font-semibold text-foreground">1st Place Classic 35+</span>
               </div>
