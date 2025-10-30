@@ -7,12 +7,12 @@ const FloatingCoachAvatar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isHeroSection, setIsHeroSection] = useState(true);
 
-  // Animate avatar appearance on mount
+  // Animate avatar appearance on mount (defer to avoid competing with FCP)
   useEffect(() => {
     // Delay the appearance for a smooth entrance after page loads
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 1500); // Appears 1.5 seconds after page load
+    }, 800); // Appear ~0.8s after page load
     
     return () => clearTimeout(timer);
   }, []);
@@ -115,11 +115,18 @@ const FloatingCoachAvatar = () => {
       >
         {/* Avatar image - no border, no circle, flush to corner */}
         <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 overflow-hidden transition-transform hover:scale-105">
-          <img
-            src="/coach-coursey.png"
-            alt="Coach Coursey"
-            className="w-full h-full object-cover"
-          />
+          {isVisible && (
+            <img
+              src="/coach-coursey.png"
+              alt="Coach Coursey"
+              className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+              width={160}
+              height={160}
+              sizes="(max-width: 640px) 64px, (max-width: 1024px) 96px, 128px"
+            />
+          )}
         </div>
       </a>
     </div>
