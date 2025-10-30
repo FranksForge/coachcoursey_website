@@ -23,7 +23,7 @@ const PhilosophySection = () => {
   ];
 
   return (
-    <section id="philosophy" className="w-full py-24 px-6 bg-secondary/30" ref={ref}>
+    <section id="philosophy" className="w-full py-24 px-6 bg-secondary/30 cv-auto" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div 
           className={`text-center mb-16 transition-all duration-1200 ${

@@ -90,6 +90,10 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px 800px;
+  }
   .text-gradient {
     @apply bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent;
   }

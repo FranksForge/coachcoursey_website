@@ -12,7 +12,7 @@ const ResultsSection = () => {
   ];
 
   return (
-    <section id="results" className="w-full py-24 px-6 bg-background" ref={ref}>
+    <section id="results" className="w-full py-24 px-6 bg-background cv-auto" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div 
           className={`text-center mb-16 transition-all duration-1200 ${

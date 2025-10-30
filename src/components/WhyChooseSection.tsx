@@ -14,7 +14,7 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <section className="w-full py-24 px-6 bg-secondary/30" ref={ref}>
+    <section className="w-full py-24 px-6 bg-secondary/30 cv-auto" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className="max-w-4xl mx-auto">
           <div 

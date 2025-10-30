@@ -23,7 +23,7 @@ const ProgramSection = () => {
   }, [isInView]);
 
   return (
-    <section id="program" className="w-full py-24 px-6 bg-secondary/30" ref={ref}>
+    <section id="program" className="w-full py-24 px-6 bg-secondary/30 cv-auto" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <div 
           className={`text-center mb-12 transition-all duration-1200 ${
@@ -52,7 +52,8 @@ const ProgramSection = () => {
                 playsInline
                 muted
                 loop
-                preload="metadata"
+                preload="none"
+                poster="/after.png"
                 className="absolute inset-0 w-full h-full object-cover"
                 aria-label="Program overview video"
               >

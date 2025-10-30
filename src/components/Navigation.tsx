@@ -100,13 +100,18 @@ const Navigation = () => {
               className="flex-shrink-0 flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
               aria-label="Home"
             >
-              <img 
-                src={logoSrc} 
-                alt="Brand logo" 
-                className="h-12 md:h-14" 
-                width="auto"
-                height="56"
-              />
+              <picture>
+                <source srcSet="/logo.webp" type="image/webp" />
+                <img 
+                  src={logoSrc} 
+                  alt="Brand logo" 
+                  className="h-12 md:h-14" 
+                  width="56"
+                  height="56"
+                  decoding="async"
+                  fetchPriority="high"
+                />
+              </picture>
               <span className="text-foreground font-bold text-lg md:text-xl hidden sm:inline">
                 {brandName}
               </span>
