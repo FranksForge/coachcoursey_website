@@ -16,7 +16,7 @@ const TransformationGallery = () => {
             The Standards I Live By
           </h2>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            I changed my body by changing my mindset–discipline, simple habits, and faith. I teach what I believe in–and what I live.
+            I changed my body by changing my mindset through discipline, simple habits, and faith. I teach what I believe in and what I live.
           </p>
         </div>
 

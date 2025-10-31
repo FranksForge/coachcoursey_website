@@ -48,11 +48,11 @@ const AboutSection = () => {
             
             <p className="text-lg text-foreground/80 leading-relaxed">
               From burnout to purpose: I help out-of-shape men burn fat, build muscle, 
-              and lead with discipline. This isn’t a quick fix–it’s a standard.
+              and lead with discipline. This isn't a quick fix, it's a standard.
             </p>
 
             <p className="text-lg text-foreground/80 leading-relaxed">
-              My approach is faith-driven and no-nonsense–simple habits, clean nutrition, 
+              My approach is faith-driven and no-nonsense: simple habits, clean nutrition, 
               progressive training, and accountability that builds real men of discipline.
             </p>
 

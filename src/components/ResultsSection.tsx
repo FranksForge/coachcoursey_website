@@ -22,7 +22,7 @@ const ResultsSection = () => {
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Results</span>
           <h2 className="mb-4 mt-4">Real People. Real Results.</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            These aren't just numbers–they're life-changing transformations.
+            These aren't just numbers, they're life-changing transformations.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ const ResultsSection = () => {
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Coach Transformation</span>
             <h3 className="mb-3 mt-3 text-foreground text-3xl md:text-4xl">The Standards I Live By</h3>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              I changed my body by changing my mindset–discipline, simple habits, and faith. I teach what I believe in–and what I live.
+              I changed my body by changing my mindset through discipline, simple habits, and faith. I teach what I believe in and what I live.
             </p>
           </div>
 

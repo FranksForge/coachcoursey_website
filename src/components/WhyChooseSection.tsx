@@ -6,11 +6,11 @@ const WhyChooseSection = () => {
 
   const reasons = [
     "Faith-driven standards: discipline first, results follow",
-    "Simple nutrition you can sustain–no gimmicks or extremes",
+    "Simple nutrition you can sustain with no gimmicks or extremes",
     "Progressive training that builds strength and muscle",
-    "Direct accountability–clear check-ins, clear expectations",
+    "Direct accountability with clear check-ins and clear expectations",
     "Movement quality and injury prevention come first",
-    "Lead at home, work, and the gym–purpose over comfort",
+    "Lead at home, work, and the gym with purpose over comfort",
   ];
 
   return (
